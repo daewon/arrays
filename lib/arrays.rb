@@ -45,6 +45,6 @@ class Array
   # take one element
   # [1, 2].head 
   # => 1
-  alias first head
+  alias head first
 end
 
