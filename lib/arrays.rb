@@ -45,8 +45,6 @@ class Array
   # take one element
   # [1, 2].head 
   # => 1
-  def head
-    self.first
-  end
+  alias first head
 end
 
