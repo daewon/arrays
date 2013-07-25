@@ -17,5 +17,9 @@ class ArraysTest < Test::Unit::TestCase
   
   def test_cluster
     assert_equal([[1], [2], [3]], [1, 2, 3].cluster { |a, b| a == b })
+    assert_equal([[1], [2, 2, 2], [3]], [1, 2, 2, 2, 3].cluster { |a, b| a == b })
+    assert_equal([[1, 1], [2, 2], [1]], [1, 1, 2, 2, 1].cluster { |a, b| a == b })
+    assert_equal([[1]], [1].cluster { |a, b| a == b })
+    assert_equal([], [].cluster { |a, b| a == b })
   end
 end
